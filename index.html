@@ -3,879 +3,497 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>3秒で心をつかむ ショート動画 神台本テンプレート集</title>
+<meta name="robots" content="noindex">
+<title>3秒で心をつかむ ショート動画 神台本テンプレート集｜無料特典</title>
 <style>
-  :root{
-    --ink:#1A1A1C;
-    --ink-soft:#2E2E32;
-    --cream:#F5F1E8;
-    --cream-light:#FAF7F0;
-    --cream-dark:#EDE6D3;
-    --gold:#C9A961;
-    --gold-soft:#D9BC7A;
-    --gold-pale:#EBDCB6;
-    --navy:#1F2D4A;
-    --navy-soft:#2C3E63;
-    --sub:#6B6862;
-    --line:#D8D1C0;
-    --line-soft:#E5DFCE;
-    --warn:#E5A87A;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;-webkit-text-size-adjust:100%;}
-  html,body{background:var(--ink);}
-  body{
-    font-family:"ヒラギノ角ゴシック","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
-    color:var(--ink);
-    line-height:1.85;
-    font-feature-settings:"palt";
-    letter-spacing:0.02em;
-    word-break:keep-all;
-    overflow-wrap:break-word;
-  }
-  .wrap{max-width:480px;margin:0 auto;background:var(--cream);overflow:hidden;position:relative;}
-  .eyebrow{font-size:10px;font-weight:600;letter-spacing:0.32em;color:var(--gold);display:inline-block;}
-  .rule{height:1px;background:var(--gold);border:none;width:32px;}
-  .rule-long{height:1px;background:var(--line);border:none;width:100%;}
-  .block{padding:64px 28px;}
-  .block-tight{padding:48px 28px;}
-  h1,h2,h3,h4{font-family:"ヒラギノ角ゴシック","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;letter-spacing:0.04em;line-height:1.55;}
-  p{letter-spacing:0.02em;}
+:root{
+  --white:#FFFFFF;
+  --paper:#FAF8F3;
+  --paper-deep:#F1ECDF;
+  --ink:#1E1D1B;
+  --ink-soft:#4A4844;
+  --line:#DDD5C2;
+  --line-soft:#EAE3D2;
+  --gold:#C9A961;
+  --gold-deep:#8C6B2E;
+  --gold-pale:#F3E7C6;
+  --navy:#2A3B5F;
+  --navy-deep:#1B2740;
+  --navy-pale:#E7EBF2;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"ヒラギノ角ゴシック","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  line-height:1.62;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:480px;margin:0 auto;padding:0 0 26px;}
+h1,h2,h3{word-break:normal;overflow-wrap:break-word;margin:0;color:var(--ink);}
+p{margin:0;}
+img,svg{max-width:100%;}
+a{color:inherit;}
 
-  /* ===== hero(cover) ===== */
-  .hero{background:var(--ink);color:var(--cream);padding:80px 28px 72px;position:relative;overflow:hidden;}
-  .hero-ornament{position:absolute;top:24px;right:24px;width:64px;height:64px;border:1px solid var(--gold);transform:rotate(45deg);opacity:0.4;}
-  .hero-ornament::after{content:"";position:absolute;inset:8px;border:1px solid var(--gold);opacity:0.6;}
-  .hero-label{font-size:10px;font-weight:600;letter-spacing:0.4em;color:var(--gold);margin-bottom:32px;}
-  .hero-title{font-size:28px;font-weight:700;line-height:1.5;color:var(--cream);letter-spacing:0.03em;margin-bottom:20px;overflow-wrap:normal;}
-  .hero-title .accent{color:var(--gold);}
-  .hero-sub{font-size:14px;line-height:1.9;color:var(--cream-dark);margin-bottom:36px;letter-spacing:0.04em;}
-  .hero-lead{list-style:none;padding:0;margin-bottom:40px;}
-  .hero-lead li{font-size:12.5px;color:var(--cream-dark);line-height:1.9;padding-left:18px;position:relative;margin-bottom:8px;}
-  .hero-lead li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--gold);}
-  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding-top:28px;border-top:1px solid rgba(201,169,97,0.3);}
-  .stat-num{font-size:22px;font-weight:700;color:var(--gold);line-height:1.3;margin-bottom:6px;letter-spacing:0.01em;}
-  .stat-num small{font-size:12px;font-weight:500;margin-left:2px;}
-  .stat-label{font-size:10.5px;color:var(--cream-dark);line-height:1.65;letter-spacing:0.05em;}
-  .cover-art-wrap{margin-top:44px;}
-  .cover-art-wrap figcaption{color:var(--gold-soft);}
+/* ---- flex子要素の折返し保険 ---- */
+.row{display:flex;min-width:0;}
+.row > *{min-width:0;}
 
-  /* ===== 汎用見出し ===== */
-  .head{margin-bottom:36px;}
-  .head .num{font-size:11px;font-weight:600;letter-spacing:0.32em;color:var(--gold);margin-bottom:14px;}
-  .head h2{font-size:22px;font-weight:700;color:var(--ink);line-height:1.6;letter-spacing:0.03em;}
-  .head .lead{margin-top:18px;font-size:13.5px;color:var(--sub);line-height:2;}
-  .dark .head .num{color:var(--gold);}
-  .dark .head h2{color:var(--cream);}
-  .dark .head .lead{color:var(--cream-dark);}
+/* ---- 共通パーツ ---- */
+.badge{
+  display:inline-block;font-size:12px;letter-spacing:.08em;color:var(--navy);
+  background:var(--navy-pale);border-radius:999px;padding:5px 14px;font-weight:700;
+}
+.eyebrow{font-size:12px;color:var(--ink-soft);letter-spacing:.06em;}
+.fine{font-size:12px;color:var(--ink-soft);text-align:center;}
+.cover-sub{font-size:15px;color:var(--ink-soft);}
+.disc{font-size:12.5px;color:var(--ink-soft);}
 
-  /* ===== figure 共通 ===== */
-  figure{margin:28px 0;}
-  figure:first-of-type{margin-top:0;}
-  .fig-svg{width:100%;height:auto;display:block;}
-  figcaption{margin-top:10px;font-size:11.5px;color:var(--sub);letter-spacing:0.08em;text-align:center;}
+/* ---- ヒーロー ---- */
+.hero{padding:24px 20px 18px;background:var(--paper);text-align:center;}
+.hero h1{font-size:24px;line-height:1.42;margin:10px 0 8px;}
+.hero .cover-sub{margin:0 0 12px;}
+.hero-checks{list-style:none;margin:0 0 12px;padding:0;display:flex;flex-direction:column;gap:6px;text-align:left;
+  background:var(--white);border:1px dashed var(--line);border-radius:14px;padding:11px 14px;}
+.hero-checks li{display:flex;gap:8px;font-size:13px;align-items:flex-start;min-width:0;line-height:1.5;}
+.hero-checks svg{flex:0 0 auto;width:18px;height:18px;margin-top:2px;}
+.hero-meta{font-size:11.5px;color:var(--ink-soft);margin:0;}
+.hero-fig{margin:0 auto 4px;max-width:220px;}
 
-  /* ===== problem(課題) ===== */
-  .problem{background:var(--cream-light);}
-  .problem-quote{margin:8px 0 28px;padding:30px 22px;background:var(--cream);border-left:2px solid var(--gold);position:relative;}
-  .problem-quote::before{content:"\201C";position:absolute;top:-8px;left:14px;font-size:40px;color:var(--gold);font-family:Georgia,serif;line-height:1;}
-  .problem-q{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.9;margin-bottom:14px;}
-  .problem-q:last-child{margin-bottom:0;}
-  .problem-conclusion{font-size:13.5px;color:var(--sub);line-height:2;margin-top:22px;}
-  .problem-conclusion strong{color:var(--ink);font-weight:600;}
+/* ---- 章カード ---- */
+.card{
+  margin:10px 14px 0;padding:16px 16px 15px;background:var(--white);
+  border:1px solid var(--line-soft);border-radius:16px;
+}
+.card.alt{background:var(--paper-deep);}
+.head-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;min-width:0;}
+.num{
+  flex:0 0 auto;font-size:23px;font-weight:800;color:var(--navy);
+  background:var(--gold-pale);border-radius:10px;padding:2px 9px;line-height:1.2;
+  font-variant-numeric:tabular-nums;
+}
+.card h2{font-size:17.5px;line-height:1.4;}
+.card p{font-size:14px;color:var(--ink);margin:7px 0 0;}
+.card p + p{margin-top:6px;}
 
-  /* ===== reasons(理由カード) ===== */
-  .reasons{display:flex;flex-direction:column;gap:22px;margin-top:8px;}
-  .reason{background:var(--cream-light);padding:28px 22px;border:1px solid var(--line-soft);position:relative;}
-  .reason-num{position:absolute;top:-12px;left:20px;background:var(--ink);color:var(--gold);font-size:10.5px;font-weight:600;letter-spacing:0.2em;padding:6px 14px;}
-  .reason h3{font-size:16px;font-weight:700;color:var(--ink);margin:16px 0 12px;line-height:1.6;}
-  .reason p{font-size:13px;color:var(--sub);line-height:2;}
+/* ---- 図解パネル ---- */
+figure{margin:10px 0 0;padding:10px 10px 8px;background:var(--paper-deep);
+  border:1px dashed var(--line);border-radius:12px;text-align:center;}
+.card.alt figure{background:var(--white);}
+figcaption{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.fig-row{display:flex;gap:8px;margin:10px 0 0;min-width:0;}
+.fig-row figure{flex:1 1 0;min-width:0;margin:0;padding:8px 4px 6px;}
+.fig-row figcaption{font-size:10.5px;}
+.icon-fig svg{width:34px;height:34px;}
 
-  /* ===== insight(帯) ===== */
-  .insight{background:var(--cream);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:30px 24px;margin:0;text-align:center;}
-  .insight-eye{font-size:10px;font-weight:600;letter-spacing:0.32em;color:var(--gold);margin-bottom:16px;}
-  .insight-text{font-size:15px;font-weight:600;line-height:1.95;color:var(--ink);}
-  .insight-text em{font-style:normal;color:var(--gold);font-weight:700;}
+/* ---- 記入欄・チェック欄の語彙 ---- */
+.worksheet-box{border:1.5px dashed var(--line);border-radius:12px;padding:10px 12px;margin-top:8px;background:var(--paper-deep);}
+.card.alt .worksheet-box{background:var(--white);}
+.check-list{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;}
+.check-list li{display:flex;gap:7px;align-items:flex-start;font-size:13px;min-width:0;line-height:1.45;}
+.check-list svg{flex:0 0 auto;width:19px;height:19px;}
 
-  /* ===== compare(before/after) ===== */
-  .compare{background:var(--cream);}
-  .ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;}
-  .ba-card{padding:24px 14px;text-align:center;}
-  .ba-card.before{background:var(--cream-dark);color:var(--sub);}
-  .ba-card.after{background:var(--ink);color:var(--cream);}
-  .ba-card .ba-label{font-size:10px;font-weight:600;letter-spacing:0.28em;margin-bottom:16px;display:block;}
-  .ba-card.before .ba-label{color:var(--sub);}
-  .ba-card.after .ba-label{color:var(--gold);}
-  .ba-card .ba-num{font-size:19px;font-weight:700;line-height:1.3;margin-bottom:8px;}
-  .ba-card.before .ba-num{color:var(--ink);}
-  .ba-card.after .ba-num{color:var(--gold);}
-  .ba-card .ba-desc{font-size:11px;line-height:1.8;letter-spacing:0.03em;}
-  .compare-table{width:100%;margin-top:28px;border-collapse:collapse;font-size:12px;}
-  .compare-table th,.compare-table td{padding:14px 8px;text-align:left;border-bottom:1px solid var(--line-soft);line-height:1.75;vertical-align:top;}
-  .compare-table th{font-size:10px;font-weight:600;letter-spacing:0.14em;color:var(--gold);background:var(--cream-light);border-bottom:1px solid var(--gold);}
-  .compare-table td:first-child{font-weight:700;color:var(--ink);width:20%;}
-  .compare-table td{color:var(--sub);}
-  .compare-table .bad{color:var(--sub);}
-  .compare-table .good{color:var(--ink);font-weight:600;}
+/* ---- プロンプトカード ---- */
+.prompt-card{
+  margin-top:10px;background:var(--navy-deep);color:var(--white);border-radius:12px;
+  padding:13px 12px;font-size:12px;line-height:1.65;text-align:left;
+  white-space:pre-wrap;overflow-wrap:break-word;font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+}
+.howto{margin-top:8px;}
+.howto ol{margin:6px 0 0;padding-left:18px;font-size:13px;}
+.howto li{margin-top:3px;}
 
-  /* ===== overview(暗地の全体像) ===== */
-  .overview{background:var(--ink);color:var(--cream);}
-  .overview-list{list-style:none;padding:0;border-top:1px solid rgba(201,169,97,0.25);margin-top:8px;}
-  .overview-list li{padding:22px 0;border-bottom:1px solid rgba(201,169,97,0.25);display:flex;gap:18px;align-items:flex-start;}
-  .overview-list .ol-num{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:0.12em;min-width:34px;padding-top:2px;}
-  .overview-list .ol-text{flex:1;}
-  .overview-list .ol-title{font-size:14.5px;font-weight:600;color:var(--cream);margin-bottom:6px;letter-spacing:0.03em;}
-  .overview-list .ol-desc{font-size:12px;color:var(--cream-dark);line-height:1.8;}
-  .overview-loop{margin-top:20px;font-size:11.5px;color:var(--gold-soft);letter-spacing:0.08em;text-align:center;}
+/* ---- 締め・最終CTA ---- */
+.outro{text-align:center;}
+.cta-final{margin:10px 14px 0;padding:20px 18px 18px;background:var(--navy-pale);
+  border-radius:16px;text-align:center;}
+.cta-final h2{font-size:17.5px;margin-bottom:6px;}
+.follow-btn{
+  display:inline-flex;align-items:center;gap:8px;margin-top:10px;
+  background:var(--navy-deep);color:var(--white);text-decoration:none;
+  padding:11px 22px;border-radius:999px;font-size:14px;font-weight:700;
+}
+.follow-btn svg{width:18px;height:18px;}
+.handle{display:block;margin-top:6px;font-size:12px;color:var(--ink-soft);}
 
-  /* ===== 各章共通(バッジ見出し) ===== */
-  .step-head{margin-bottom:32px;}
-  .step-head .badge{display:inline-block;background:var(--ink);color:var(--gold);font-size:10.5px;font-weight:600;letter-spacing:0.26em;padding:8px 16px;margin-bottom:18px;}
-  .step-head h2{font-size:21px;font-weight:700;color:var(--ink);line-height:1.6;letter-spacing:0.03em;}
-  .step-head .lead{margin-top:16px;font-size:13.5px;color:var(--sub);line-height:2;}
+footer{padding:16px 14px 4px;}
 
-  /* ===== settings(トリガー/チェック等の番号リスト) ===== */
-  .settings{background:var(--cream-light);padding:26px 20px;border:1px solid var(--line-soft);margin-top:24px;}
-  .settings-title{font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.18em;margin-bottom:18px;text-align:center;padding-bottom:14px;border-bottom:1px solid var(--line-soft);}
-  .setting-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line-soft);align-items:flex-start;}
-  .setting-item:last-child{border-bottom:none;padding-bottom:4px;}
-  .setting-num{flex-shrink:0;width:30px;height:30px;background:var(--ink);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;}
-  .setting-body{flex:1;padding-top:2px;}
-  .setting-name{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.6;}
-  .setting-why{font-size:12px;color:var(--sub);line-height:1.85;}
-  .setting-why strong{color:var(--ink);font-weight:600;}
-
-  /* ===== genre-grid(チップ) ===== */
-  .genre-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;}
-  .genre-chip{background:var(--cream-light);border:1px solid var(--line-soft);padding:16px 12px;text-align:center;font-size:12px;color:var(--ink);font-weight:600;line-height:1.6;}
-  .genre-chip.pick{border-color:var(--gold);background:var(--cream);}
-  .genre-chip .gc-num{display:block;font-size:9px;color:var(--gold);letter-spacing:0.2em;margin-bottom:6px;font-weight:700;}
-  .genre-chip .gc-sub{display:block;font-size:10px;color:var(--sub);font-weight:400;margin-top:4px;}
-
-  /* ===== prompt-card ===== */
-  .prompt-card{background:var(--ink);color:var(--cream);margin:28px 0;position:relative;border:1px solid var(--gold);}
-  .prompt-card::before,.prompt-card::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--gold);}
-  .prompt-card::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
-  .prompt-card::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
-  .prompt-header{padding:22px 22px 16px;border-bottom:1px solid rgba(201,169,97,0.3);}
-  .prompt-tag{font-size:10px;font-weight:600;letter-spacing:0.3em;color:var(--gold);margin-bottom:10px;}
-  .prompt-title{font-size:14.5px;font-weight:700;color:var(--cream);line-height:1.7;}
-  .prompt-body{padding:20px 22px;font-size:12px;line-height:2.05;color:var(--cream-dark);white-space:pre-wrap;letter-spacing:0.02em;}
-  .prompt-body .ph-label{color:var(--gold-soft);font-weight:600;}
-  .prompt-foot{padding:14px 22px;background:rgba(201,169,97,0.08);font-size:11px;color:var(--gold-pale);line-height:1.8;letter-spacing:0.04em;border-top:1px solid rgba(201,169,97,0.2);}
-
-  /* ===== timeline(段階) ===== */
-  .stages{margin-top:24px;position:relative;}
-  .stages::before{content:"";position:absolute;left:17px;top:8px;bottom:8px;width:1px;background:var(--gold);}
-  .stage{display:flex;gap:18px;margin-bottom:30px;position:relative;}
-  .stage:last-child{margin-bottom:0;}
-  .stage-marker{flex-shrink:0;width:35px;height:35px;background:var(--cream);border:1.5px solid var(--gold);color:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;z-index:1;}
-  .stage-body{flex:1;padding-top:4px;}
-  .stage-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:0.03em;}
-  .stage-tasks{list-style:none;padding:0;}
-  .stage-tasks li{font-size:12.5px;color:var(--sub);line-height:1.85;padding-left:15px;position:relative;margin-bottom:4px;}
-  .stage-tasks li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:1px;background:var(--gold);}
-
-  /* ===== pitfalls(暗地) ===== */
-  .pitfalls{background:var(--ink);color:var(--cream);}
-  .pit{padding:24px 20px;border:1px solid rgba(201,169,97,0.2);margin-bottom:14px;background:rgba(255,255,255,0.02);}
-  .pit:last-child{margin-bottom:0;}
-  .pit-x{font-size:10.5px;font-weight:600;letter-spacing:0.22em;color:var(--warn);margin-bottom:10px;}
-  .pit-ng{font-size:14px;font-weight:700;color:var(--cream);margin-bottom:14px;line-height:1.7;}
-  .pit-arrow{font-size:10px;letter-spacing:0.28em;color:var(--gold);margin-bottom:8px;}
-  .pit-fix{font-size:12.5px;color:var(--cream-dark);line-height:2;}
-  .pit-fix strong{color:var(--gold-soft);font-weight:600;}
-
-  /* ===== cta(最終・フォロー) ===== */
-  .cta{background:var(--cream-light);text-align:center;padding:72px 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .cta-eye{font-size:10px;font-weight:600;letter-spacing:0.4em;color:var(--gold);margin-bottom:24px;}
-  .cta-title{font-size:20px;font-weight:700;color:var(--ink);line-height:1.7;margin-bottom:18px;}
-  .cta-sub{font-size:13px;color:var(--sub);line-height:2.05;margin-bottom:36px;}
-  .cta-sub .disc{display:block;margin-top:18px;font-size:11.5px;color:var(--sub);}
-  .cta-button{display:inline-block;background:var(--ink);color:var(--gold);padding:20px 32px;text-decoration:none;font-size:13.5px;font-weight:700;letter-spacing:0.12em;border:1px solid var(--gold);transition:transform 0.2s ease;}
-  .cta-handle{margin-top:22px;font-size:12px;color:var(--sub);letter-spacing:0.08em;}
-  .cta-handle .at{color:var(--gold);font-weight:600;}
-
-  .footer{background:var(--ink);color:var(--cream-dark);text-align:center;padding:36px 24px;font-size:11px;letter-spacing:0.18em;}
-  .footer .copy{color:var(--gold);margin-bottom:6px;font-size:10px;}
-
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none !important;}
-  }
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important;transition-duration:0.001ms !important;}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<!-- ================= cover ================= -->
-<header class="hero dark" id="cover">
-  <div class="hero-ornament"></div>
-  <div class="hero-label">— 無料特典 —</div>
-  <h1 class="hero-title">3秒で心をつかむ<br>ショート動画<br>神台本テンプレート集</h1>
-  <p class="hero-sub">指を止めて、<br>最後まで、動かす。</p>
-  <ul class="hero-lead">
-    <li>台本を、フックからCTAまで、<wbr>1本書けます。</li>
-    <li>人が離れる場所と、<wbr>その直し方が分かります。</li>
-    <li>台本の下書きを、<wbr>AIに任せられます。</li>
+<!-- アイコンの色クラス（各SVGはvar()経由の塗り/線のみ・:root外hexなし） -->
+<style>
+.stroke-navy{stroke:var(--navy);} .stroke-gold{stroke:var(--gold);}
+.stroke-line{stroke:var(--line);} .stroke-line-soft{stroke:var(--line-soft);}
+.fill-gold{fill:var(--gold);} .fill-navy{fill:var(--navy);}
+</style>
+
+<!-- ============ ヒーロー ============ -->
+<header class="hero" id="cover">
+  <span class="badge">無料特典</span>
+  <h1>3秒で心をつかむ<br>ショート動画<br>神台本テンプレート集</h1>
+  <p class="cover-sub">指を止めて、<br>最後まで、動かす。</p>
+
+  <figure class="hero-fig">
+    <svg viewBox="0 0 300 82" role="img" aria-label="最初の3秒で急落し、その後ゆるやかに残る維持カーブ">
+      <rect x="0" y="0" width="300" height="82" rx="12" fill="var(--paper-deep)"/>
+      <path d="M20 18 C 38 18, 44 58, 62 61 C 120 67, 220 63, 280 60" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/>
+      <line x1="62" y1="13" x2="62" y2="68" stroke="var(--line)" stroke-dasharray="3 4"/>
+      <text x="62" y="10" text-anchor="middle" font-size="10" fill="var(--ink-soft)" font-family="Hiragino Kaku Gothic ProN, sans-serif">3秒</text>
+    </svg>
+    <figcaption>止めて、残して、動かす。</figcaption>
+  </figure>
+
+  <ul class="hero-checks">
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>フックからCTAまで、台本を1本書けます。</li>
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>人が離れる場所と、直し方が分かります。</li>
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>台本の下書きを、AIに任せられます。</li>
   </ul>
-  <div class="hero-stats">
-    <div class="stat"><div class="stat-num">10<small>分</small></div><div class="stat-label">読む目安</div></div>
-    <div class="stat"><div class="stat-num">1<small>台</small></div><div class="stat-label">必要なもの、<wbr>スマホだけ</div></div>
-  </div>
-  <div class="cover-art-wrap">
-    <figure>
-      <svg class="fig-svg" viewBox="0 0 315 190" role="img" aria-label="止めて、残して、動かす">
-        <rect x="112" y="8" width="90" height="140" rx="6" fill="none" stroke="var(--gold)" stroke-width="1.2" opacity="0.55"/>
-        <rect x="120" y="18" width="74" height="120" rx="2" fill="rgba(201,169,97,0.06)"/>
-        <path d="M126 36 L150 110 L162 90 L188 102" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M126 36 L150 110" fill="none" stroke="var(--gold)" stroke-width="3.6" stroke-linecap="round"/>
-        <circle cx="126" cy="36" r="3.4" fill="var(--gold)"/>
-        <circle cx="188" cy="102" r="3.4" fill="var(--gold)"/>
-        <text x="157" y="182" text-anchor="middle" font-size="12" fill="var(--gold-pale)" font-family="Hiragino Kaku Gothic ProN, sans-serif" letter-spacing="1">3秒 → 最後まで</text>
-      </svg>
-      <figcaption>止めて、<wbr>残して、動かす。</figcaption>
-    </figure>
-  </div>
+  <p class="hero-meta">読む目安 3分／必要なもの スマホ1台</p>
 </header>
 
-<!-- ================= problem(課題) ================= -->
-<section class="problem block" id="problem">
-  <div class="head">
-    <div class="num">はじめに</div>
-    <h2>台本が、<br>9割を決める</h2>
-  </div>
-  <div class="problem-quote">
-    <p class="problem-q">動画は、<wbr>才能や機材で決まりません。<wbr>決めているのは、<wbr>話す順番です。</p>
-  </div>
+<!-- ============ 01 intro ============ -->
+<section class="card" id="intro">
+  <div class="head-row"><span class="num">01</span><h2>台本が、<br>9割を決める</h2></div>
   <figure>
-    <svg class="fig-svg" viewBox="0 0 315 96" role="img" aria-label="台本構成が9割、編集機材が1割">
-      <text x="0" y="12" font-size="10.5" fill="var(--sub)" font-family="Hiragino Kaku Gothic ProN, sans-serif">台本・構成</text>
-      <text x="315" y="12" text-anchor="end" font-size="10.5" fill="var(--sub)" font-family="Hiragino Kaku Gothic ProN, sans-serif">編集・機材</text>
-      <rect x="0" y="20" width="315" height="34" fill="var(--cream-dark)"/>
-      <rect x="0" y="20" width="284" height="34" fill="var(--navy)"/>
-      <text x="284" y="70" text-anchor="end" font-size="12" font-weight="700" fill="var(--gold)" font-family="Hiragino Kaku Gothic ProN, sans-serif">9割</text>
-      <text x="300" y="70" text-anchor="end" font-size="11" fill="var(--sub)" font-family="Hiragino Kaku Gothic ProN, sans-serif">1割</text>
+    <svg viewBox="0 0 300 70" role="img" aria-label="台本と構成が9割、編集や機材は1割という帯グラフ">
+      <rect x="10" y="20" width="280" height="28" rx="8" fill="var(--paper-deep)"/>
+      <rect x="10" y="20" width="252" height="28" rx="8" fill="var(--navy)"/>
+      <text x="30" y="39" font-size="13" fill="var(--white)" font-family="Hiragino Kaku Gothic ProN, sans-serif">台本・構成 9割</text>
+      <text x="276" y="39" font-size="11" fill="var(--ink-soft)" font-family="Hiragino Kaku Gothic ProN, sans-serif" text-anchor="middle">1割</text>
     </svg>
-    <figcaption>勝負は、<wbr>撮る前に決まる。</figcaption>
+    <figcaption>勝負は、撮る前に決まる。</figcaption>
   </figure>
-  <p style="font-size:13.5px;color:var(--sub);line-height:2;margin-top:24px;">追いかけるのは、<wbr>再生数ではありません。<wbr>「最後まで見られて、<wbr>行動される」ことです。</p>
+  <p>動画の勝敗は、<wbr>才能や機材ではなく<wbr>話す順番で決まります。</p>
+</section>
+
+<!-- ============ 02 flow ============ -->
+<section class="card alt" id="flow">
+  <div class="head-row"><span class="num">02</span><h2>伸びる台本は、<br>4ステップ</h2></div>
   <figure>
-    <svg class="fig-svg" viewBox="0 0 315 130" role="img" aria-label="大きさより動き">
-      <rect x="6" y="10" width="140" height="110" fill="var(--cream-light)" stroke="var(--line-soft)"/>
-      <text x="76" y="60" text-anchor="middle" font-size="26" font-weight="700" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">再生数</text>
-      <text x="76" y="98" text-anchor="middle" font-size="10.5" fill="var(--sub)" font-family="Hiragino Kaku Gothic ProN, sans-serif">大きいだけ</text>
-      <rect x="168" y="10" width="140" height="110" fill="var(--ink)"/>
-      <text x="238" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="var(--cream)" font-family="Hiragino Kaku Gothic ProN, sans-serif">行動</text>
-      <path d="M238 66 L238 96" stroke="var(--gold)" stroke-width="3" stroke-linecap="round"/>
-      <polygon points="238,88 232,100 244,100" fill="var(--gold)"/>
-    </svg>
-    <figcaption>大きさより、<wbr>動き。</figcaption>
-  </figure>
-  <div class="rule-long" style="margin:32px 0;"></div>
-  <div class="head">
-    <div class="num">いちばん大事な話</div>
-    <h2>勝負は、<br>最初の3秒</h2>
-  </div>
-  <p style="font-size:13.5px;color:var(--sub);line-height:2;">見られた割合は、<wbr>最初の3秒でいちばん急に落ちます。<wbr>ここが崖です。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 170" role="img" aria-label="3秒で急落しその後は横ばい">
-      <rect x="0" y="0" width="315" height="170" fill="var(--ink)"/>
-      <line x1="30" y1="20" x2="30" y2="140" stroke="rgba(201,169,97,0.3)" stroke-width="1"/>
-      <line x1="30" y1="140" x2="300" y2="140" stroke="rgba(201,169,97,0.3)" stroke-width="1"/>
-      <path d="M30 34 L70 118 L300 126" fill="none" stroke="var(--gold-pale)" stroke-width="1.4" opacity="0.5"/>
-      <path d="M30 34 L70 118" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round"/>
-      <path d="M70 118 L300 126" fill="none" stroke="var(--gold)" stroke-width="1.6"/>
-      <line x1="70" y1="24" x2="70" y2="140" stroke="var(--gold)" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
-      <text x="70" y="18" text-anchor="middle" font-size="11" fill="var(--gold)" font-family="Hiragino Kaku Gothic ProN, sans-serif">3秒</text>
-      <text x="210" y="112" text-anchor="middle" font-size="11" fill="var(--gold-pale)" font-family="Hiragino Kaku Gothic ProN, sans-serif">越えた人は残る</text>
-    </svg>
-    <figcaption style="color:var(--gold-pale);">崖の手前で、<wbr>決まる。</figcaption>
-  </figure>
-  <p style="font-size:13.5px;color:var(--sub);line-height:2;margin-top:20px;">3秒の壁を越えた人は、<wbr>最後まで残りやすい。<wbr>だから、<wbr>つかみに全部を懸けます。</p>
-  <p style="font-size:13.5px;color:var(--sub);line-height:2;margin-top:16px;">最後まで見られた動画ほど、<wbr>次の人に届きます。<wbr>2026年7月時点の一般的な傾向です。</p>
-</section>
-
-<!-- ================= reasons ================= -->
-<section class="block-tight" id="reasons">
-  <div class="head">
-    <div class="num">伸びない理由</div>
-    <h2>最後まで見られない、<br>3つの理由</h2>
-    <p class="lead">台本のどこかに、<wbr>必ずこの3つの、<wbr>どれかが起きています。</p>
-  </div>
-  <div class="reasons">
-    <div class="reason">
-      <span class="reason-num">理由 01</span>
-      <h3>最初の3秒で、<br>指が離れる</h3>
-      <p>見られた割合は、<wbr>最初の3秒でいちばん急に落ちます。<wbr>ここが崖です。</p>
-    </div>
-    <div class="reason">
-      <span class="reason-num">理由 02</span>
-      <h3>中身に、<br>詰め込みすぎる</h3>
-      <p>中身は、<wbr>詰め込むほど見られません。<wbr>伝えることは、<wbr>1つに絞ります。</p>
-    </div>
-    <div class="reason">
-      <span class="reason-num">理由 03</span>
-      <h3>最後に、<br>何も促さない</h3>
-      <p>最後は、<wbr>してほしい事を伝える場所です。<wbr>ここを作らないと、<wbr>見て終わりになります。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= insight ================= -->
-<section class="insight" id="insight">
-  <div class="insight-eye">いちばん大事な数字</div>
-  <p class="insight-text">台本(構成)が、<br><em>9割</em>を決めます。<br>編集や機材は、残り1割です。</p>
-</section>
-
-<!-- ================= compare ================= -->
-<section class="compare block" id="compare">
-  <div class="head">
-    <div class="num">ビフォー / アフター</div>
-    <h2>型に沿うだけで、<br>ここまで変わる</h2>
-  </div>
-  <div class="ba">
-    <div class="ba-card before">
-      <span class="ba-label">思いつき台本</span>
-      <div class="ba-num">迷う</div>
-      <div class="ba-desc">何となく話し始めて、<wbr>最後まで見られない。</div>
-    </div>
-    <div class="ba-card after">
-      <span class="ba-label">4ステップ台本</span>
-      <div class="ba-num">迷わない</div>
-      <div class="ba-desc">型どおりに置くだけで、<wbr>最後まで見てもらえる。</div>
-    </div>
-  </div>
-  <table class="compare-table">
-    <tr><th></th><th>思いつき台本</th><th>4ステップ台本</th></tr>
-    <tr><td>つかみ</td><td class="bad">あいさつから、<wbr>始めてしまう</td><td class="good">3秒に、<wbr>一番強い言葉を置く</td></tr>
-    <tr><td>中身</td><td class="bad">あれもこれも、<wbr>詰め込む</td><td class="good">伝えることを、<wbr>1つに絞る</td></tr>
-    <tr><td>最後</td><td class="bad">お願いを、<wbr>いくつも言う</td><td class="good">してほしい事を、<wbr>1つだけ促す</td></tr>
-  </table>
-</section>
-
-<!-- ================= overview(暗地の全体像) ================= -->
-<section class="overview block dark" id="overview">
-  <div class="head">
-    <div class="num">動画マーケの型</div>
-    <h2>伸びる台本は、<br>4ステップ</h2>
-    <p class="lead">台本は、<wbr>4つを順に置くだけです。<wbr>むずかしく考えなくて、<wbr>大丈夫です。</p>
-  </div>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 300" role="img" aria-label="つかみ引き中身CTAの4ステップとループ">
+    <svg viewBox="0 0 300 128" role="img" aria-label="つかみ・引き・中身・CTAの4段階が上から下へ矢印でつながる図">
       <g font-family="Hiragino Kaku Gothic ProN, sans-serif">
-        <rect x="10" y="6" width="295" height="52" rx="8" fill="none" stroke="var(--gold)" stroke-width="1.6"/>
-        <text x="28" y="30" font-size="12" font-weight="700" fill="var(--gold)">① つかみ</text>
-        <text x="28" y="48" font-size="10.5" fill="var(--cream-dark)">0〜3秒・指を止める</text>
-        <line x1="157" y1="58" x2="157" y2="76" stroke="var(--gold)" stroke-width="1.4"/>
-        <polygon points="157,80 152,70 162,70" fill="var(--gold)"/>
-
-        <rect x="10" y="84" width="295" height="52" rx="8" fill="none" stroke="rgba(201,169,97,0.5)" stroke-width="1.2"/>
-        <text x="28" y="108" font-size="12" font-weight="700" fill="var(--cream)">② 引き</text>
-        <text x="28" y="126" font-size="10.5" fill="var(--cream-dark)">クイズで引っぱる</text>
-        <line x1="157" y1="136" x2="157" y2="154" stroke="rgba(201,169,97,0.5)" stroke-width="1.4"/>
-        <polygon points="157,158 152,148 162,148" fill="var(--gold)" opacity="0.7"/>
-
-        <rect x="10" y="162" width="295" height="52" rx="8" fill="none" stroke="rgba(201,169,97,0.5)" stroke-width="1.2"/>
-        <text x="28" y="186" font-size="12" font-weight="700" fill="var(--cream)">③ 中身</text>
-        <text x="28" y="204" font-size="10.5" fill="var(--cream-dark)">本編・約束を果たす</text>
-        <line x1="157" y1="214" x2="157" y2="232" stroke="rgba(201,169,97,0.5)" stroke-width="1.4"/>
-        <polygon points="157,236 152,226 162,226" fill="var(--gold)" opacity="0.7"/>
-
-        <rect x="10" y="240" width="295" height="52" rx="8" fill="none" stroke="rgba(201,169,97,0.5)" stroke-width="1.2"/>
-        <text x="28" y="264" font-size="12" font-weight="700" fill="var(--cream)">④ CTA</text>
-        <text x="28" y="282" font-size="10.5" fill="var(--cream-dark)">最後・ひとつ促す</text>
-
-        <path d="M305 266 C 318 266 318 30 305 30" fill="none" stroke="var(--gold)" stroke-width="1.2" stroke-dasharray="3,3"/>
-        <polygon points="305,30 313,33 313,25" fill="var(--gold)"/>
+        <rect x="16" y="4" width="268" height="24" rx="7" fill="var(--gold-pale)" stroke="var(--gold)" stroke-width="2"/>
+        <text x="30" y="20" font-size="12" fill="var(--ink)">①つかみ　0〜3秒</text>
+        <rect x="16" y="36" width="268" height="24" rx="7" fill="var(--white)" stroke="var(--line)"/>
+        <text x="30" y="52" font-size="12" fill="var(--ink)">②引き　4〜15秒</text>
+        <rect x="16" y="68" width="268" height="24" rx="7" fill="var(--white)" stroke="var(--line)"/>
+        <text x="30" y="84" font-size="12" fill="var(--ink)">③中身　本編</text>
+        <rect x="16" y="100" width="268" height="24" rx="7" fill="var(--white)" stroke="var(--line)"/>
+        <text x="30" y="116" font-size="12" fill="var(--ink)">④CTA　最後</text>
+      </g>
+      <g stroke="var(--navy)" stroke-width="3" fill="none" stroke-linecap="round">
+        <line x1="150" y1="28" x2="150" y2="35"/><line x1="150" y1="60" x2="150" y2="67"/><line x1="150" y1="92" x2="150" y2="99"/>
       </g>
     </svg>
-    <figcaption style="color:var(--gold-soft);">上から順に、<wbr>置くだけ。</figcaption>
+    <figcaption>上から順に、置くだけ。</figcaption>
   </figure>
-  <ul class="overview-list">
-    <li><span class="ol-num">01</span><div class="ol-text"><div class="ol-title">つかみ（0〜3秒）</div><div class="ol-desc">指を止める、<wbr>心理トリガーを1つ置く。</div></div></li>
-    <li><span class="ol-num">02</span><div class="ol-text"><div class="ol-title">引き（4〜15秒）</div><div class="ol-desc">クイズで、<wbr>頭に「？」を作り続ける。</div></div></li>
-    <li><span class="ol-num">03</span><div class="ol-text"><div class="ol-title">中身（本編）</div><div class="ol-desc">伝えることを1つに絞り、<wbr>約束を果たす。</div></div></li>
-    <li><span class="ol-num">04</span><div class="ol-text"><div class="ol-title">CTA（最後）</div><div class="ol-desc">してほしい事を、<wbr>ひとつだけ促す。</div></div></li>
+  <p>むずかしく考えず、<wbr>この4つを順に置くだけです。</p>
+</section>
+
+<!-- ============ 03 wall ============ -->
+<section class="card" id="wall">
+  <div class="head-row"><span class="num">03</span><h2>勝負は、<br>最初の3秒</h2></div>
+  <figure>
+    <svg viewBox="0 0 300 92" role="img" aria-label="時間経過による視聴維持率のグラフ。最初の3秒で急落し、その後は横ばい">
+      <line x1="16" y1="12" x2="16" y2="76" stroke="var(--line)"/>
+      <line x1="16" y1="76" x2="288" y2="76" stroke="var(--line)"/>
+      <path d="M20 18 C 32 18, 40 65, 58 68 C 128 73, 218 70, 282 68" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/>
+      <line x1="58" y1="13" x2="58" y2="72" stroke="var(--navy)" stroke-dasharray="3 4"/>
+      <text x="58" y="10" text-anchor="middle" font-size="10" fill="var(--ink-soft)" font-family="Hiragino Kaku Gothic ProN, sans-serif">3秒の壁</text>
+    </svg>
+    <figcaption>崖の手前で、決まる。</figcaption>
+  </figure>
+  <p>見られた割合は、<wbr>最初の3秒でいちばん急に落ちます。</p>
+  <p>越えた人は、<wbr>最後まで残りやすくなります。<br>2026年7月時点の一般的な傾向です。</p>
+</section>
+
+<!-- ============ 04 hook ============ -->
+<section class="card alt" id="hook">
+  <div class="head-row"><span class="num">04</span><h2>指を止める、<br>5つのスイッチ</h2></div>
+  <div class="fig-row">
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g class="stroke-navy" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 24 L32 10 L50 24" class="stroke-gold"/><path d="M14 40 L32 54 L50 40"/>
+  <line x1="32" y1="10" x2="32" y2="54"/>
+</g></svg><figcaption>常識破壊</figcaption></figure>
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linecap="round">
+  <line x1="10" y1="14" x2="10" y2="50" class="stroke-line"/>
+  <line x1="10" y1="50" x2="54" y2="50" class="stroke-line"/>
+  <path d="M16 22 L30 34 L40 26 L54 40" class="stroke-gold"/>
+  <path d="M46 40 L54 40 L54 32" class="stroke-gold"/>
+</g></svg><figcaption>損失回避</figcaption></figure>
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linecap="round">
+  <path d="M32 10 a22 22 0 1 1 -15.5 6.5" class="stroke-navy"/>
+  <circle cx="32" cy="32" r="4" class="fill-gold" stroke="none"/>
+</g></svg><figcaption>好奇心</figcaption></figure>
+  </div>
+  <div class="fig-row">
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linejoin="round">
+  <rect x="8" y="12" width="48" height="32" rx="10" class="stroke-navy"/>
+  <path d="M28 48 L20 58 L32 48 Z" class="fill-navy stroke-navy"/>
+  <text x="32" y="34" text-anchor="middle" class="fill-gold" font-size="22" font-family="Hiragino Kaku Gothic ProN, sans-serif" stroke="none">？</text>
+</g></svg><figcaption>問いかけ</figcaption></figure>
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4">
+  <circle cx="32" cy="32" r="22" class="stroke-line-soft"/>
+  <circle cx="32" cy="32" r="13" class="stroke-navy"/>
+  <circle cx="32" cy="32" r="4" class="fill-gold" stroke="none"/>
+  <path d="M4 4 L20 20" class="stroke-gold" stroke-linecap="round"/>
+  <path d="M4 4 L4 14 M4 4 L14 4" class="stroke-gold" stroke-linecap="round"/>
+</g></svg><figcaption>自分ごと</figcaption></figure>
+  </div>
+  <p>フックは3案作り、<wbr>声に出して一番強いものを選びます。</p>
+  <figure>
+    <svg viewBox="0 0 300 80" role="img" aria-label="フックから中身へ橋がかかる図。橋げたが約束を果たす部分">
+      <path d="M20 44 Q150 12 280 44" fill="none" stroke="var(--line)" stroke-width="3"/>
+      <path d="M60 44 Q150 24 240 44" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/>
+      <text x="8" y="66" font-size="12" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">フック</text>
+      <text x="292" y="66" text-anchor="end" font-size="12" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">中身</text>
+    </svg>
+    <figcaption>フックは、中身への橋。</figcaption>
+  </figure>
+  <p>強い言葉で釣って中身が無いと、<wbr>一気に信頼を失います。</p>
+</section>
+
+<!-- ============ 05 quiz ============ -->
+<section class="card" id="quiz">
+  <div class="head-row"><span class="num">05</span><h2>クイズで、<br>引っぱり続ける</h2></div>
+  <figure>
+    <svg viewBox="0 0 300 76" role="img" aria-label="？と答えが交互に連なる連鎖図">
+      <g font-family="Hiragino Kaku Gothic ProN, sans-serif" font-size="14" text-anchor="middle">
+        <circle cx="34" cy="38" r="24" fill="var(--gold-pale)" stroke="var(--gold)" stroke-width="2"/><text x="34" y="43" fill="var(--ink)">？</text>
+        <circle cx="112" cy="38" r="24" fill="var(--navy-pale)" stroke="var(--navy)" stroke-width="2"/><text x="112" y="43" fill="var(--ink)">答え</text>
+        <circle cx="190" cy="38" r="24" fill="var(--gold-pale)" stroke="var(--gold)" stroke-width="2"/><text x="190" y="43" fill="var(--ink)">？</text>
+        <circle cx="266" cy="38" r="24" fill="var(--navy-pale)" stroke="var(--navy)" stroke-width="2"/><text x="266" y="43" fill="var(--ink)">答え</text>
+      </g>
+      <g stroke="var(--ink-soft)" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+        <line x1="60" y1="38" x2="86" y2="38"/><line x1="138" y1="38" x2="164" y2="38"/><line x1="216" y1="38" x2="242" y2="38"/>
+      </g>
+      <defs><marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--ink-soft)"/></marker></defs>
+    </svg>
+    <figcaption>？と答えを、交互に。</figcaption>
+  </figure>
+  <p>すぐ全部は答えず、<wbr>1つ答えたらまた「？」を出します。</p>
+</section>
+
+<!-- ============ 06 body ============ -->
+<section class="card alt" id="body">
+  <div class="head-row"><span class="num">06</span><h2>伝えるのは、<br>1本に1つ</h2></div>
+  <figure>
+    <svg viewBox="0 0 300 110" role="img" aria-label="上の広い口にネタの断片、下の細い出口から1つだけ出てくるじょうご図">
+      <path d="M30 14 L270 14 L180 70 L120 70 Z" fill="var(--paper-deep)" stroke="var(--line)" stroke-width="2"/>
+      <rect x="132" y="78" width="36" height="24" rx="5" fill="var(--gold)"/>
+      <line x1="150" y1="70" x2="150" y2="78" stroke="var(--line)" stroke-width="2"/>
+      <text x="150" y="10" text-anchor="middle" font-size="11" fill="var(--ink-soft)" font-family="Hiragino Kaku Gothic ProN, sans-serif">あれもこれも</text>
+      <text x="150" y="94" text-anchor="middle" font-size="10" fill="var(--white)" font-family="Hiragino Kaku Gothic ProN, sans-serif">1つ</text>
+    </svg>
+    <figcaption>あれもこれもを、1つに。</figcaption>
+  </figure>
+  <p>要点は3つまで。<br>4つ以上は覚えてもらえません。</p>
+  <figure>
+    <svg viewBox="0 0 300 46" role="img" aria-label="2〜3秒ごとに変化の目盛りが並ぶ図">
+      <line x1="10" y1="30" x2="290" y2="30" stroke="var(--line)" stroke-width="2"/>
+      <g stroke="var(--ink-soft)" stroke-width="2">
+        <line x1="10" y1="22" x2="10" y2="38"/><line x1="70" y1="22" x2="70" y2="38"/>
+        <line x1="130" y1="14" x2="130" y2="38" stroke="var(--gold)" stroke-width="3"/>
+        <line x1="190" y1="22" x2="190" y2="38"/><line x1="250" y1="22" x2="250" y2="38"/>
+      </g>
+      <text x="130" y="10" text-anchor="middle" font-size="10" fill="var(--gold-deep)" font-family="Hiragino Kaku Gothic ProN, sans-serif">ひと変化</text>
+    </svg>
+    <figcaption>2〜3秒ごとに、ひと変化。</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 07 ask（④CTAの作り方・免責1回目） ============ -->
+<section class="card" id="ask">
+  <div class="head-row"><span class="num">07</span><h2>最後に、<br>ひとつだけ促す</h2></div>
+  <figure>
+    <svg viewBox="0 0 64 64" style="max-width:64px;"><g fill="none" stroke-width="4">
+  <circle cx="32" cy="32" r="22" class="stroke-line-soft"/>
+  <circle cx="32" cy="32" r="13" class="stroke-navy"/>
+  <circle cx="32" cy="32" r="4" class="fill-gold" stroke="none"/>
+  <path d="M4 4 L20 20" class="stroke-gold" stroke-linecap="round"/>
+  <path d="M4 4 L4 14 M4 4 L14 4" class="stroke-gold" stroke-linecap="round"/>
+</g></svg>
+    <figcaption>お願いは、1つだけ。</figcaption>
+  </figure>
+  <p>あれもこれも頼むと、<wbr>どれもされません。</p>
+  <p>声に出す言葉と、<wbr>画面に出す文字の両方を用意します。</p>
+  <div class="worksheet-box">
+    <div class="fig-row">
+      <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linecap="round">
+  <circle cx="26" cy="26" r="15" class="stroke-navy"/>
+  <line x1="44" y1="20" x2="56" y2="20" class="stroke-gold"/>
+  <line x1="50" y1="14" x2="50" y2="26" class="stroke-gold"/>
+</g></svg><figcaption>フォロー</figcaption></figure>
+      <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linecap="round">
+  <circle cx="14" cy="32" r="7" class="stroke-navy"/>
+  <circle cx="48" cy="14" r="7" class="stroke-navy"/>
+  <circle cx="48" cy="50" r="7" class="stroke-navy"/>
+  <line x1="20" y1="28" x2="42" y2="17" class="stroke-gold"/>
+  <line x1="20" y1="36" x2="42" y2="47" class="stroke-gold"/>
+</g></svg><figcaption>共有</figcaption></figure>
+    </div>
+    <div class="fig-row">
+      <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linejoin="round">
+  <path d="M10 14 h44 a4 4 0 0 1 4 4 v22 a4 4 0 0 1 -4 4 h-26 l-10 10 v-10 h-8 a4 4 0 0 1 -4 -4 v-22 a4 4 0 0 1 4 -4 Z" class="stroke-navy"/>
+  <circle cx="24" cy="30" r="2.6" class="fill-gold" stroke="none"/>
+  <circle cx="34" cy="30" r="2.6" class="fill-gold" stroke="none"/>
+  <circle cx="44" cy="30" r="2.6" class="fill-gold" stroke="none"/>
+</g></svg><figcaption>LINE追加</figcaption></figure>
+      <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M8 12 h8 l6 30 h30 l6 -22 H20" class="stroke-navy"/>
+  <circle cx="26" cy="52" r="4" class="stroke-navy"/>
+  <circle cx="46" cy="52" r="4" class="stroke-navy"/>
+</g></svg><figcaption>購入</figcaption></figure>
+    </div>
+  </div>
+  <p>目的に合わせて、<wbr>次から1つ選びます。</p>
+  <p class="disc">成果を保証するものではありません。<br>相手や中身との相性で、結果は変わります。</p>
+</section>
+
+<!-- ============ 08 loop ============ -->
+<section class="card alt" id="loop">
+  <div class="head-row"><span class="num">08</span><h2>最後を最初に、<br>つなげる</h2></div>
+  <figure>
+    <svg viewBox="0 0 140 135" style="max-width:118px;" role="img" aria-label="最初の場面と最後のひと言を矢印でつなぐ循環図">
+      <circle cx="70" cy="68" r="40" fill="none" stroke="var(--line)" stroke-width="3"/>
+      <path d="M70 28 A40 40 0 0 1 107 82" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/>
+      <text x="70" y="15" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">最初</text>
+      <text x="70" y="122" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">最後</text>
+    </svg>
+    <figcaption>終わりが、始まりに戻る。</figcaption>
+  </figure>
+  <p>最後のひと言を、<wbr>最初の場面に<wbr>つなぐと、<wbr>もう一度見られます。</p>
+</section>
+
+<!-- ============ 09 ai ============ -->
+<section class="card" id="ai">
+  <div class="head-row"><span class="num">09</span><h2>台本の下書きは、<br>AIに任せる</h2></div>
+  <p>ChatGPTなどに、<wbr>次の文をそのまま貼ります。</p>
+  <div class="prompt-card">あなたはショート動画の構成作家です。
+次のテーマで30秒の台本を作ってください。
+・テーマ：〔　　〕
+・見てほしい人：〔　　〕
+・最後にしてほしい事：〔フォロー/保存/共有/LINE登録/購入から1つ〕
+
+条件：
+①フックは3案（10〜14文字）
+②4〜15秒は「？」を作り、答え、また「？」
+③中身は1つに絞り、要点は3つまで
+④最後は1つだけ促す（声と文字の両方）
+⑤全体120文字前後・話し言葉
+⑥2〜3秒ごとの画面の変化も添える</div>
+  <div class="howto">
+    <p class="eyebrow">使い方は3ステップ</p>
+    <ol>
+      <li>〔　〕を、自分のネタに書きかえる。</li>
+      <li>出てきたフック3案から、1つ選ぶ。</li>
+      <li>声に出して読み、固い言葉を直す。</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 10 research ============ -->
+<section class="card alt" id="research">
+  <div class="head-row"><span class="num">10</span><h2>ネタも、<br>AIで探す</h2></div>
+  <p>探す場所を決めて、<wbr>AIにまとめさせます。</p>
+  <div class="fig-row">
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 46 L24 30 L34 38 L56 14" class="stroke-gold"/>
+  <path d="M44 14 H56 V26" class="stroke-gold"/>
+  <line x1="8" y1="54" x2="56" y2="54" class="stroke-line"/>
+</g></svg><figcaption>伸びている人</figcaption></figure>
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linecap="round">
+  <circle cx="27" cy="27" r="16" class="stroke-navy"/>
+  <line x1="39" y1="39" x2="54" y2="54" class="stroke-gold"/>
+</g></svg><figcaption>よく出る言葉</figcaption></figure>
+    <figure class="icon-fig"><svg viewBox="0 0 64 64"><g fill="none" stroke-width="4" stroke-linejoin="round">
+  <path d="M8 12 h48 v30 h-32 l-10 10 v-10 h-6 Z" class="stroke-navy"/>
+  <line x1="18" y1="24" x2="46" y2="24" class="stroke-gold"/>
+  <line x1="18" y1="32" x2="38" y2="32" class="stroke-line"/>
+</g></svg><figcaption>コメント・質問</figcaption></figure>
+  </div>
+  <p>寄せられた質問をAIに10個並べさせ、<wbr>その中から1本作ります。</p>
+</section>
+
+<!-- ============ 11 check ============ -->
+<section class="card" id="check">
+  <div class="head-row"><span class="num">11</span><h2>投稿前の、<br>5つのチェック</h2></div>
+  <ul class="check-list">
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>最初の3秒に、いちばん強い言葉があるか。</li>
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>あいさつから、始めていないか。</li>
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>伝えることは、1つに絞れているか。</li>
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>2〜3秒ごとに、変化があるか。</li>
+    <li><svg viewBox="0 0 64 64"><g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="8" y="8" width="48" height="48" rx="12" class="stroke-line"/>
+  <path d="M18 33 L28 43 L47 20" class="stroke-gold"/>
+</g></svg>最後に、してほしい事を促せているか。</li>
   </ul>
-  <div class="overview-loop">最後のひと言を最初につなぐと、<wbr>もう一度見られます（ループ）。</div>
-  <p class="lead" style="margin-top:28px;">この先で、<wbr>4つを1つずつ、<wbr>作り方まで見ていきます。</p>
-</section>
-
-<!-- ================= hook(①つかみ) ================= -->
-<section class="block" id="hook">
-  <div class="step-head">
-    <span class="badge">動画マーケ ① つかみ</span>
-    <h2>指を止める、<br>5つのスイッチ</h2>
-    <p class="lead">つかみは、<wbr>人の心のスイッチを押すことです。<wbr>次の5つが、<wbr>よく効きます。</p>
-  </div>
-  <div class="settings">
-    <div class="settings-title">心のスイッチ、5種</div>
-    <div class="setting-item">
-      <span class="setting-num"><span>01</span></span>
-      <div class="setting-body"><div class="setting-name">常識破壊（え、逆なの？）</div><div class="setting-why">例：<wbr>「毎日出しても、<wbr>伸びないことがあります。」</div></div>
-    </div>
-    <div class="setting-item">
-      <span class="setting-num"><span>02</span></span>
-      <div class="setting-body"><div class="setting-name">損失回避（損したくない）</div><div class="setting-why">例：<wbr>「9割が知らずに、<wbr>損しています。」</div></div>
-    </div>
-    <div class="setting-item">
-      <span class="setting-num"><span>03</span></span>
-      <div class="setting-body"><div class="setting-name">好奇心（続きが気になる）</div><div class="setting-why">例：<wbr>「伸びる人だけがやっている事、<wbr>あります。」</div></div>
-    </div>
-    <div class="setting-item">
-      <span class="setting-num"><span>04</span></span>
-      <div class="setting-body"><div class="setting-name">問いかけ（自分の悩みだ）</div><div class="setting-why">例：<wbr>「動画が伸びない理由、<wbr>知っていますか。」</div></div>
-    </div>
-    <div class="setting-item">
-      <span class="setting-num"><span>05</span></span>
-      <div class="setting-body"><div class="setting-name">自分ごと（これ、私のこと）</div><div class="setting-why">例：<wbr>「はじめての人が、<wbr>つまずく所です。」</div></div>
-    </div>
-  </div>
-  <p style="font-size:13px;color:var(--sub);line-height:2;margin-top:24px;">フックは1つに絞らず、<wbr>3つ作ります。<wbr>声に出して、<wbr>いちばん強いものを選びます。</p>
+  <p>出したあとは、<wbr>3つの数字だけ見ます。</p>
   <figure>
-    <svg class="fig-svg" viewBox="0 0 315 140" role="img" aria-label="好奇心ギャップ、頭の中の空白から答えへ">
-      <circle cx="70" cy="70" r="46" fill="none" stroke="var(--gold)" stroke-width="2"/>
-      <text x="70" y="78" text-anchor="middle" font-size="24" font-weight="700" fill="var(--gold)" font-family="Hiragino Kaku Gothic ProN, sans-serif">？</text>
-      <path d="M122 70 L188 70" stroke="var(--navy)" stroke-width="2" marker-end="url(#arrow1)"/>
-      <defs><marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--navy)"/></marker></defs>
-      <text x="155" y="58" text-anchor="middle" font-size="10.5" fill="var(--sub)" font-family="Hiragino Kaku Gothic ProN, sans-serif">続きを見たい</text>
-      <circle cx="238" cy="70" r="46" fill="var(--navy)"/>
-      <text x="238" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="var(--cream)" font-family="Hiragino Kaku Gothic ProN, sans-serif">答え</text>
+    <svg viewBox="0 0 300 72" role="img" aria-label="落ちた場所と直す場所を対応させる図。3秒で落ちたらつかみ、途中なら中身、最後まで見たのに動かないならCTA">
+      <g font-family="Hiragino Kaku Gothic ProN, sans-serif" font-size="12">
+        <text x="10" y="16" fill="var(--ink)">3秒で落ちた</text><text x="200" y="16" fill="var(--gold-deep)">→ つかみ</text>
+        <text x="10" y="40" fill="var(--ink)">途中で落ちた</text><text x="200" y="40" fill="var(--gold-deep)">→ 中身</text>
+        <text x="10" y="64" fill="var(--ink)">動かない</text><text x="200" y="64" fill="var(--gold-deep)">→ CTA</text>
+      </g>
     </svg>
-    <figcaption>空白を作ると、<wbr>埋めたくなる。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">気をつける事が1つ。<wbr>強い言葉で釣って、<wbr>中身が無いと、<wbr>一気に嫌われます。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 120" role="img" aria-label="フックは中身への橋">
-      <rect x="10" y="70" width="70" height="30" fill="var(--cream-dark)"/>
-      <text x="45" y="90" text-anchor="middle" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">フック</text>
-      <rect x="235" y="70" width="70" height="30" fill="var(--ink)"/>
-      <text x="270" y="90" text-anchor="middle" font-size="11" fill="var(--cream)" font-family="Hiragino Kaku Gothic ProN, sans-serif">中身</text>
-      <rect x="80" y="80" width="155" height="8" fill="var(--gold)"/>
-      <text x="157" y="60" text-anchor="middle" font-size="10.5" fill="var(--sub)" font-family="Hiragino Kaku Gothic ProN, sans-serif">約束を守る</text>
-    </svg>
-    <figcaption>フックは、<wbr>中身への橋。</figcaption>
-  </figure>
-
-  <div class="prompt-card">
-    <div class="prompt-header">
-      <div class="prompt-tag">コピペ用プロンプト</div>
-      <div class="prompt-title">フックだけを3案、<br>AIに出させる</div>
-    </div>
-    <div class="prompt-body">あなたは、ショート動画のコピーライターです。
-次のテーマで、指を止める一行を3つ考えてください。
-
-・テーマ：<span class="ph-label">〔ここに書く〕</span>
-・見てほしい人：<span class="ph-label">〔ここに書く〕</span>
-
-条件：
-①常識破壊・損失回避・好奇心・問いかけ・自分ごと
-　の5つから、違う種類を3つ選ぶ。
-②1つにつき10〜14文字。話し言葉で、やさしく。
-③どの心理トリガーを使ったかも、併記する。
-
-3案とも声に出して読み、いちばん強いものを選んでください。</div>
-    <div class="prompt-foot">貼って、<wbr>テーマだけ入れる。</div>
-  </div>
-</section>
-
-<!-- ================= quiz(②引き) ================= -->
-<section class="block" id="quiz">
-  <div class="step-head">
-    <span class="badge">動画マーケ ② 引き</span>
-    <h2>クイズで、<br>引っぱり続ける</h2>
-    <p class="lead">4〜15秒は、<wbr>クイズの時間です。<wbr>相手の頭に「？」を作ります。</p>
-  </div>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">すぐ全部は答えません。<wbr>1つ答えたら、<wbr>また次の「？」を出します。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 100" role="img" aria-label="？と答えが交互に連鎖する">
-      <circle cx="30" cy="50" r="20" fill="var(--gold)"/>
-      <text x="30" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">？</text>
-      <line x1="52" y1="50" x2="90" y2="50" stroke="var(--sub)" stroke-width="1.4" marker-end="url(#a2)"/>
-      <circle cx="112" cy="50" r="20" fill="var(--navy)"/>
-      <text x="112" y="56" text-anchor="middle" font-size="11" fill="var(--cream)" font-family="Hiragino Kaku Gothic ProN, sans-serif">答え</text>
-      <line x1="134" y1="50" x2="172" y2="50" stroke="var(--sub)" stroke-width="1.4" marker-end="url(#a2)"/>
-      <circle cx="194" cy="50" r="20" fill="var(--gold)"/>
-      <text x="194" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">？</text>
-      <line x1="216" y1="50" x2="254" y2="50" stroke="var(--sub)" stroke-width="1.4" marker-end="url(#a2)"/>
-      <circle cx="276" cy="50" r="20" fill="var(--navy)"/>
-      <text x="276" y="56" text-anchor="middle" font-size="11" fill="var(--cream)" font-family="Hiragino Kaku Gothic ProN, sans-serif">答え</text>
-      <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--sub)"/></marker></defs>
-    </svg>
-    <figcaption>？と答えを、<wbr>交互に。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">答えを小出しにするほど、<wbr>人は続きを見ます。<wbr>感情の波がある動画は、<wbr>最後まで見られやすくなります。</p>
-  <figure>
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      <div style="background:var(--cream-light);border:1px solid var(--line-soft);padding:14px 16px;font-size:12.5px;color:var(--ink);">「伸びる人は、<wbr>ある事をやめました。」</div>
-      <div style="text-align:center;"><svg width="16" height="16" viewBox="0 0 16 16"><polygon points="8,14 2,4 14,4" fill="var(--gold)"/></svg></div>
-      <div style="background:var(--cream-light);border:1px solid var(--line-soft);padding:14px 16px;font-size:12.5px;color:var(--ink);">「それは"長い前置き"です。」</div>
-      <div style="text-align:center;"><svg width="16" height="16" viewBox="0 0 16 16"><polygon points="8,14 2,4 14,4" fill="var(--gold)"/></svg></div>
-      <div style="background:var(--cream);border:1px solid var(--gold);padding:14px 16px;font-size:12.5px;color:var(--ink);font-weight:600;">「では、<wbr>代わりに何を置く？」</div>
-    </div>
-    <figcaption>引いて、<wbr>また引く。</figcaption>
+    <figcaption>落ちた場所が、直す場所。</figcaption>
   </figure>
 </section>
 
-<!-- ================= body(③中身) ================= -->
-<section class="block" id="body">
-  <div class="step-head">
-    <span class="badge">動画マーケ ③ 中身</span>
-    <h2>伝えるのは、<br>1本に1つ</h2>
-    <p class="lead">中身は、<wbr>詰め込むほど見られません。<wbr>伝えることは、<wbr>1つに絞ります。</p>
-  </div>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 150" role="img" aria-label="じょうご、多くのネタから1つへ">
-      <polygon points="30,10 285,10 190,110 125,110" fill="none" stroke="var(--navy)" stroke-width="1.6"/>
-      <rect x="40" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <rect x="68" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <rect x="96" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <rect x="124" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <rect x="152" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <rect x="180" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <rect x="208" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <rect x="236" y="16" width="18" height="18" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <line x1="125" y1="110" x2="125" y2="128" stroke="var(--gold)" stroke-width="1.4"/>
-      <line x1="190" y1="110" x2="190" y2="128" stroke="var(--gold)" stroke-width="1.4"/>
-      <rect x="135" y="128" width="45" height="18" fill="var(--gold)"/>
-    </svg>
-    <figcaption>あれもこれもを、<wbr>1つに。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">どうしても複数あるなら、<wbr>要点は3つまで。<wbr>4つ以上は、<wbr>覚えてもらえません。</p>
-  <p style="font-size:13px;color:var(--sub);line-height:2;margin-top:14px;">もう1つ大事なのが、<wbr>変化です。<wbr>2〜3秒ごとに、<wbr>画面か言葉を変えます。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 70" role="img" aria-label="2〜3秒ごとの変化の目盛り">
-      <line x1="10" y1="40" x2="305" y2="40" stroke="var(--line)" stroke-width="1.4"/>
-      <line x1="40" y1="30" x2="40" y2="50" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="90" y1="30" x2="90" y2="50" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="140" y1="24" x2="140" y2="56" stroke="var(--gold)" stroke-width="2.4"/>
-      <line x1="190" y1="30" x2="190" y2="50" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="240" y1="30" x2="240" y2="50" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="290" y1="30" x2="290" y2="50" stroke="var(--sub)" stroke-width="1.4"/>
-      <text x="140" y="18" text-anchor="middle" font-size="10.5" fill="var(--gold)" font-family="Hiragino Kaku Gothic ProN, sans-serif">ひと変化</text>
-    </svg>
-    <figcaption>2〜3秒ごとに、<wbr>ひと変化。</figcaption>
-  </figure>
+<!-- ============ outro（免責2回目） ============ -->
+<section class="card outro" id="outro">
+  <h2>まず1本、<br>書いてみよう</h2>
+  <p>型に沿って、1本書くだけです。<br>出して、見て、直す。この繰り返しです。</p>
+  <p class="disc">成果を保証するものではありません。<br>それでも、続けた人から変わっていきます。</p>
 </section>
 
-<!-- ================= ask(④CTAの作り方) ================= -->
-<section class="block" id="ask">
-  <div class="step-head">
-    <span class="badge">動画マーケ ④ CTA</span>
-    <h2>最後に、<br>ひとつだけ促す</h2>
-    <p class="lead">最後は、<wbr>してほしい事を伝える場所です。<wbr>ここを作らないと、<wbr>見て終わりになります。</p>
-  </div>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">大事なのは、<wbr>1つに絞ることです。<wbr>あれもこれも頼むと、<wbr>どれもされません。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 140" role="img" aria-label="散る矢印と、的に届く1本の矢印">
-      <circle cx="70" cy="70" r="4" fill="var(--sub)"/>
-      <line x1="70" y1="70" x2="30" y2="30" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="70" y1="70" x2="110" y2="24" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="70" y1="70" x2="20" y2="80" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="70" y1="70" x2="34" y2="120" stroke="var(--sub)" stroke-width="1.4"/>
-      <line x1="70" y1="70" x2="120" y2="118" stroke="var(--sub)" stroke-width="1.4"/>
-      <circle cx="240" cy="70" r="34" fill="none" stroke="var(--line)" stroke-width="6"/>
-      <circle cx="240" cy="70" r="20" fill="none" stroke="var(--gold-pale)" stroke-width="6"/>
-      <circle cx="240" cy="70" r="7" fill="var(--gold)"/>
-      <line x1="180" y1="70" x2="228" y2="70" stroke="var(--gold)" stroke-width="3" marker-end="url(#a3)"/>
-      <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--gold)"/></marker></defs>
-    </svg>
-    <figcaption>お願いは、<wbr>1つだけ。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">言葉は短く、<wbr>得を伝えます。<wbr>声に出す言葉と、<wbr>画面に出す文字の両方を用意します。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 110" role="img" aria-label="声と文字が同じ行動を指す">
-      <path d="M20 45 L40 45 L58 30 L58 80 L40 65 L20 65 Z" fill="var(--navy)"/>
-      <path d="M66 40 Q76 55 66 70" fill="none" stroke="var(--navy)" stroke-width="2.4" stroke-linecap="round"/>
-      <rect x="150" y="30" width="60" height="40" fill="var(--cream-dark)" stroke="var(--line)"/>
-      <text x="180" y="54" text-anchor="middle" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">画面文字</text>
-      <line x1="90" y1="55" x2="130" y2="55" stroke="var(--gold)" stroke-width="1.4" stroke-dasharray="3,3"/>
-      <line x1="240" y1="55" x2="270" y2="55" stroke="var(--gold)" stroke-width="1.4" stroke-dasharray="3,3"/>
-      <circle cx="290" cy="55" r="12" fill="var(--gold)"/>
-      <text x="290" y="59" text-anchor="middle" font-size="9.5" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">行動</text>
-    </svg>
-    <figcaption>声と文字、<wbr>二重で届ける。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">目的に合わせて、<wbr>次から1つ選びます。</p>
-  <figure>
-    <div class="genre-grid">
-      <div class="genre-chip pick"><span class="gc-num">今日はこれ</span>フォロー<span class="gc-sub">また会える</span></div>
-      <div class="genre-chip">共有<span class="gc-sub">友だちに教える</span></div>
-      <div class="genre-chip">LINE追加<span class="gc-sub">続きを受け取る</span></div>
-      <div class="genre-chip">購入<span class="gc-sub">商品を見る</span></div>
-    </div>
-    <figcaption>今日の1つを、<wbr>選ぶ。</figcaption>
-  </figure>
-  <p style="font-size:12.5px;color:var(--sub);line-height:2;margin-top:20px;">成果を保証するものではありません。相手や中身との相性で、<wbr>結果は変わります。</p>
+<!-- ============ 最終CTA ============ -->
+<section class="cta-final" id="cta">
+  <h2>もっと台本のコツを、<br>お届けします</h2>
+  <a class="follow-btn" href="https://www.instagram.com/ai_fukugyo_yumi_/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke-width="4" stroke-linecap="round">
+  <circle cx="26" cy="26" r="15" class="stroke-navy"/>
+  <line x1="44" y1="20" x2="56" y2="20" class="stroke-gold"/>
+  <line x1="50" y1="14" x2="50" y2="26" class="stroke-gold"/>
+</g></svg>
+    Instagramをフォローする
+  </a>
+  <span class="handle">@ai_fukugyo_yumi_</span>
 </section>
 
-<!-- ================= loop(ループ設計) ================= -->
-<section class="block" id="loop">
-  <div class="step-head">
-    <span class="badge">もうひと工夫</span>
-    <h2>最後を最初に、<br>つなげる</h2>
-    <p class="lead">最後のひと言を、<wbr>最初の場面につなぐと、<wbr>もう一度見られます。</p>
-  </div>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 180" role="img" aria-label="円環、最後から最初へ戻る">
-      <circle cx="157" cy="90" r="66" fill="none" stroke="var(--line)" stroke-width="1.4"/>
-      <path d="M157,24 A66,66 0 1 1 156,24" fill="none" stroke="var(--gold)" stroke-width="2.6" marker-end="url(#a4)"/>
-      <defs><marker id="a4" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--gold)"/></marker></defs>
-      <rect x="122" y="4" width="70" height="30" fill="var(--ink)"/>
-      <text x="157" y="24" text-anchor="middle" font-size="11" fill="var(--cream)" font-family="Hiragino Kaku Gothic ProN, sans-serif">最初の場面</text>
-      <rect x="122" y="146" width="70" height="30" fill="var(--gold)"/>
-      <text x="157" y="166" text-anchor="middle" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">最後のひと言</text>
-    </svg>
-    <figcaption>終わりが、<wbr>始まりに戻る。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">繰り返し見られると、<wbr>次の人にも届きやすくなります。<wbr>小さな工夫ですが、<wbr>効きます。</p>
-</section>
-
-<!-- ================= ai(AIプロンプト) ================= -->
-<section class="block" id="ai">
-  <div class="step-head">
-    <span class="badge">時短のコツ</span>
-    <h2>台本の下書きは、<br>AIに任せる</h2>
-    <p class="lead">下書きは、<wbr>AIに書かせると速いです。<wbr>ChatGPTやGeminiなどに、<wbr>次の文をそのまま貼ります。</p>
-  </div>
-  <div class="prompt-card">
-    <div class="prompt-header">
-      <div class="prompt-tag">コピペ用プロンプト</div>
-      <div class="prompt-title">30秒の台本を、<br>まるごと作らせる</div>
-    </div>
-    <div class="prompt-body">あなたは、ショート動画の構成作家です。
-心理トリガーと、視聴維持の設計にくわしいプロとして答えてください。
-
-次のテーマで、30秒の縦型ショート動画の台本を作ってください。
-・テーマ：<span class="ph-label">〔ここに書く〕</span>
-・見てほしい人：<span class="ph-label">〔ここに書く〕</span>
-・最後にしてほしい事：<span class="ph-label">〔フォロー / 保存 / 共有 / LINE登録 / 商品を見る から1つ〕</span>
-
-条件：
-①フックは3案。常識破壊・損失回避・好奇心・問いかけ・自分ごと から選び、10〜14文字で。
-②4〜15秒は、頭に「？」を作り、答え、また「？」を出す流れに。
-③中身は1つのメッセージに絞り、要点は3つまで。
-④最後は、してほしい事を1つだけ、やさしく促す。声の言葉と画面の文字の両方を書く。
-⑤全体で日本語120文字前後。話し言葉。むずかしい言葉は使わない。
-⑥2〜3秒ごとの画面の変化（テロップ・場面）も添える。
-
-出したら、フック3案／秒数つき台本／テロップ案 の形でまとめてください。</div>
-    <div class="prompt-foot">貼って、<wbr>テーマを入れるだけ。</div>
-  </div>
-  <div class="settings">
-    <div class="settings-title">使い方は3段階</div>
-    <div class="setting-item"><span class="setting-num"><span>01</span></span><div class="setting-body"><div class="setting-why"><span class="ph-label">〔　〕</span>を、<wbr>自分のネタに書きかえる。</div></div></div>
-    <div class="setting-item"><span class="setting-num"><span>02</span></span><div class="setting-body"><div class="setting-why">出てきたフック3案から、<wbr>1つ選ぶ。</div></div></div>
-    <div class="setting-item"><span class="setting-num"><span>03</span></span><div class="setting-body"><div class="setting-why">声に出して読み、<wbr>固い言葉を直す。</div></div></div>
-  </div>
-  <p style="font-size:13px;color:var(--sub);line-height:2;margin-top:20px;">AIの下書きは、<wbr>たたき台です。<wbr>そのまま使わず、<wbr>自分の言葉に直します。</p>
-</section>
-
-<!-- ================= research(ネタ探し) ================= -->
-<section class="block" id="research">
-  <div class="step-head">
-    <span class="badge">ネタ切れをなくす</span>
-    <h2>ネタも、<br>AIで探す</h2>
-    <p class="lead">ネタが尽きるのは、<wbr>ゼロから考えるからです。<wbr>探す所を決めて、<wbr>AIに任せます。</p>
-  </div>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 90" role="img" aria-label="探す、まとめる、直すの3段階">
-      <rect x="0" y="26" width="90" height="38" fill="var(--cream-light)" stroke="var(--line-soft)"/>
-      <text x="45" y="49" text-anchor="middle" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">①選ぶ</text>
-      <line x1="94" y1="45" x2="118" y2="45" stroke="var(--gold)" stroke-width="1.6" marker-end="url(#a5)"/>
-      <rect x="122" y="20" width="90" height="50" fill="var(--gold)"/>
-      <text x="167" y="49" text-anchor="middle" font-size="11" fill="var(--ink)" font-weight="700" font-family="Hiragino Kaku Gothic ProN, sans-serif">②AIが整理</text>
-      <line x1="216" y1="45" x2="240" y2="45" stroke="var(--gold)" stroke-width="1.6" marker-end="url(#a5)"/>
-      <rect x="244" y="26" width="70" height="38" fill="var(--cream-light)" stroke="var(--line-soft)"/>
-      <text x="279" y="49" text-anchor="middle" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">③直す</text>
-      <defs><marker id="a5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--gold)"/></marker></defs>
-    </svg>
-    <figcaption>集めて、<wbr>まとめて、直す。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">探す所は、<wbr>大きく3つです。<wbr>ここから毎回1つ選びます。</p>
-  <figure>
-    <div class="genre-grid" style="grid-template-columns:1fr;">
-      <div class="genre-chip pick" style="text-align:left;"><span class="gc-num">よく見る</span>伸びている人（何が受けているか）</div>
-      <div class="genre-chip" style="text-align:left;">よく出る言葉（今の関心）</div>
-      <div class="genre-chip" style="text-align:left;">コメント・質問（みんなの悩み）</div>
-    </div>
-    <figcaption>悩みは、<wbr>コメントに落ちている。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">たとえば、<wbr>寄せられた質問をAIに10個並べさせ、<wbr>その中から1本作ります。<wbr>答えが、<wbr>そのまま台本になります。</p>
-  <div class="prompt-card">
-    <div class="prompt-header">
-      <div class="prompt-tag">コピペ用プロンプト</div>
-      <div class="prompt-title">ネタを、<br>AIに10個並べさせる</div>
-    </div>
-    <div class="prompt-body">あなたは、ショート動画のネタ出し担当です。
-次の材料から、台本のネタ候補を10個、
-箇条書きで出してください。
-
-・伸びている人の投稿、<wbr>よく出る言葉、<wbr>寄せられた質問やコメントのどれか：
-　<span class="ph-label">〔ここに貼る〕</span>
-
-条件：
-①1個につき1行、20文字以内。
-②答えると誰かの得になる、<wbr>質問の形で。
-③似た内容は1つにまとめる。
-
-出てきた10個から、いちばん答えたい1つを選んでください。</div>
-    <div class="prompt-foot">貼って、<wbr>材料を入れるだけ。</div>
-  </div>
-</section>
-
-<!-- ================= check(投稿前チェック) ================= -->
-<section class="block" id="check">
-  <div class="step-head">
-    <span class="badge">出す前に</span>
-    <h2>投稿前の、<br>5つのチェック</h2>
-  </div>
-  <figure>
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--cream-light);border:1px solid var(--line-soft);">
-        <svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9 L7 14 L16 3" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="font-size:12.5px;color:var(--ink);">最初の3秒に、<wbr>いちばん強い言葉があるか。</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--cream-light);border:1px solid var(--line-soft);">
-        <svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9 L7 14 L16 3" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="font-size:12.5px;color:var(--ink);">あいさつや自己紹介から、<wbr>始めていないか。</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--cream-light);border:1px solid var(--line-soft);">
-        <svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9 L7 14 L16 3" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="font-size:12.5px;color:var(--ink);">伝えることは、<wbr>1つに絞れているか。</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--cream-light);border:1px solid var(--line-soft);">
-        <svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9 L7 14 L16 3" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="font-size:12.5px;color:var(--ink);">2〜3秒ごとに、<wbr>変化があるか。</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--cream);border:1px solid var(--gold);">
-        <svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9 L7 14 L16 3" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="font-size:12.5px;color:var(--ink);font-weight:600;">最後に、<wbr>してほしい事を1つ促せているか。</span>
-      </div>
-    </div>
-    <figcaption>5つ通れば、<wbr>出してよし。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">出したあとは、<wbr>3つの数字だけ見ます。<wbr>多く見ると、<wbr>どこを直すか分からなくなります。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 130" role="img" aria-label="3つの数字メーター">
-      <text x="0" y="16" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">3秒まで残った割合</text>
-      <rect x="0" y="22" width="315" height="10" fill="var(--cream-dark)"/>
-      <rect x="0" y="22" width="150" height="10" fill="var(--navy)"/>
-      <text x="0" y="56" font-size="11" fill="var(--ink)" font-weight="700" font-family="Hiragino Kaku Gothic ProN, sans-serif">最後まで見られた割合</text>
-      <rect x="0" y="62" width="315" height="14" fill="var(--cream-dark)"/>
-      <rect x="0" y="62" width="230" height="14" fill="var(--gold)"/>
-      <text x="0" y="102" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">保存された数</text>
-      <rect x="0" y="108" width="315" height="10" fill="var(--cream-dark)"/>
-      <rect x="0" y="108" width="110" height="10" fill="var(--navy)"/>
-    </svg>
-    <figcaption>見るのは、<wbr>この3つだけ。</figcaption>
-  </figure>
-  <p style="font-size:13px;color:var(--sub);line-height:2;">3秒で落ちるなら、<wbr>つかみを直します。<wbr>途中で落ちるなら、<wbr>中身を直します。</p>
-  <figure>
-    <svg class="fig-svg" viewBox="0 0 315 150" role="img" aria-label="落ちた場所と直す場所の対応">
-      <text x="0" y="20" font-size="11.5" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">3秒で落ちた</text>
-      <line x1="140" y1="16" x2="190" y2="16" stroke="var(--gold)" stroke-width="1.6" marker-end="url(#a6)"/>
-      <text x="200" y="20" font-size="11.5" font-weight="700" fill="var(--gold)" font-family="Hiragino Kaku Gothic ProN, sans-serif">つかみ</text>
-      <text x="0" y="70" font-size="11.5" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">途中で落ちた</text>
-      <line x1="140" y1="66" x2="190" y2="66" stroke="var(--gold)" stroke-width="1.6" marker-end="url(#a6)"/>
-      <text x="200" y="70" font-size="11.5" font-weight="700" fill="var(--gold)" font-family="Hiragino Kaku Gothic ProN, sans-serif">中身</text>
-      <text x="0" y="122" font-size="11" fill="var(--ink)" font-family="Hiragino Kaku Gothic ProN, sans-serif">見たのに動かない</text>
-      <line x1="140" y1="118" x2="190" y2="118" stroke="var(--gold)" stroke-width="1.6" marker-end="url(#a6)"/>
-      <text x="200" y="122" font-size="11.5" font-weight="700" fill="var(--gold)" font-family="Hiragino Kaku Gothic ProN, sans-serif">CTA</text>
-      <defs><marker id="a6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--gold)"/></marker></defs>
-    </svg>
-    <figcaption>落ちた場所が、<wbr>直す場所。</figcaption>
-  </figure>
-</section>
-
-<!-- ================= timeline(段階) ================= -->
-<section class="block" id="timeline">
-  <div class="head">
-    <div class="num">書き上げるまで</div>
-    <h2>台本が仕上がる、<br>4つの段階</h2>
-  </div>
-  <div class="stages">
-    <div class="stage">
-      <div class="stage-marker"><span>01</span></div>
-      <div class="stage-body">
-        <div class="stage-title">ネタを、AIと一緒に探す</div>
-        <ul class="stage-tasks">
-          <li>3つの探し所から、<wbr>1つ選ぶ</li>
-          <li>AIに候補を、<wbr>並べさせる</li>
-        </ul>
-      </div>
-    </div>
-    <div class="stage">
-      <div class="stage-marker"><span>02</span></div>
-      <div class="stage-body">
-        <div class="stage-title">型に沿って、書いてみる</div>
-        <ul class="stage-tasks">
-          <li>つかみ<wbr>→引き<wbr>→中身<wbr>→CTAの順に置く</li>
-          <li>フックは、<wbr>3案つくる</li>
-        </ul>
-      </div>
-    </div>
-    <div class="stage">
-      <div class="stage-marker"><span>03</span></div>
-      <div class="stage-body">
-        <div class="stage-title">声に出して、直す</div>
-        <ul class="stage-tasks">
-          <li>いちばん強いフックを選ぶ</li>
-          <li>固い言葉を、<wbr>やさしく直す</li>
-        </ul>
-      </div>
-    </div>
-    <div class="stage">
-      <div class="stage-marker"><span>04</span></div>
-      <div class="stage-body">
-        <div class="stage-title">出して、数字を見る</div>
-        <ul class="stage-tasks">
-          <li>3つの数字だけ見る</li>
-          <li>落ちた場所を、<wbr>直す</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= pitfalls(暗地の落とし穴) ================= -->
-<section class="pitfalls block dark" id="pitfalls">
-  <div class="head">
-    <div class="num">よくある落とし穴</div>
-    <h2>出す前に、<br>3つだけ確認</h2>
-  </div>
-  <div class="pit">
-    <div class="pit-x">NG</div>
-    <div class="pit-ng">フックで強く引いたのに、<wbr>中身が薄い。</div>
-    <div class="pit-arrow">▼ 解決策</div>
-    <div class="pit-fix">フックは、<strong>中身への橋</strong>です。<wbr>約束を守る中身にします。</div>
-  </div>
-  <div class="pit">
-    <div class="pit-x">NG</div>
-    <div class="pit-ng">あいさつや自己紹介から、<wbr>始めてしまう。</div>
-    <div class="pit-arrow">▼ 解決策</div>
-    <div class="pit-fix">3秒は<strong>いきなり本題</strong>です。<wbr>いちばん強い言葉を先に置きます。</div>
-  </div>
-  <div class="pit">
-    <div class="pit-x">NG</div>
-    <div class="pit-ng">最後に、<wbr>お願いをいくつも言ってしまう。</div>
-    <div class="pit-arrow">▼ 解決策</div>
-    <div class="pit-fix">してほしい事は、<strong>1つだけ</strong>選びます。</div>
-  </div>
-</section>
-
-<!-- ================= cta(最終CTA) ================= -->
-<section class="cta" id="cta">
-  <div class="cta-eye">おわりに</div>
-  <h2 class="cta-title">まず1本、<br>書いてみよう</h2>
-  <p class="cta-sub">ここまで、<wbr>ありがとうございます。<wbr>あとは、<wbr>型に沿って1本書くだけです。<br><br>最初からうまくいかなくて、<wbr>当たり前です。<wbr>出して、<wbr>数字を見て、<wbr>直す。<wbr>この繰り返しで、<wbr>少しずつ上手くなります。<span class="disc">成果を保証するものではありません。<wbr>それでも、<wbr>続けた人から変わっていきます。</span></p>
-  <a class="cta-button" href="https://www.instagram.com/ai_fukugyo_yumi_/" target="_blank" rel="noopener">Instagram をフォローする</a>
-  <div class="cta-handle"><span class="at">@</span>ai_fukugyo_yumi_</div>
-</section>
-
-<footer class="footer">
-  <div class="copy">無料特典</div>
-  ショート動画 神台本テンプレート集
-</footer>
+<footer><p class="fine">ショート動画 神台本テンプレート集</p></footer>
 
 </div>
 </body>
